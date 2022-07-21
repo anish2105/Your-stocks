@@ -1,0 +1,234 @@
+
+a{
+  font-size: 25px;
+  text-decoration:none;
+  text-decoration-color: none;
+}
+
+nav{
+  background-color: white;
+}
+
+/* a:hover{
+  text-decoration: underline;
+  text-decoration-color: green;
+} */
+.nav-link{
+  padding: 10px;
+  padding-left: 5px;
+  border: 1px solid #87BE39;
+  border-radius: 15px;
+  background-color:#87BE39 ;
+  color:white;
+  margin: 10px;
+  font-family: sans-serif;
+}
+
+.nav-link:hover{
+  text-decoration: none;
+  color: black;
+
+}
+
+.nav-item{
+  color: white;
+}
+
+.navbar-brand{
+  font-size: 30px;
+}
+
+#main{
+  position: relative;
+  top: 75px;
+  text-align: center;
+  font-size: 85px;
+}
+
+#your{
+  color:#87BE39;
+}
+
+#mainpara{
+  position: relative;
+  top : 120px;
+  text-align: center;
+}
+
+#mainpara2{
+  position: relative;
+  top : 150px;
+  text-align: center;
+  color: #87BE39;
+}
+
+nav{
+  background-color: #2FABA4;
+}
+
+.bt{
+  padding: 30px;
+
+  color: white;
+  background-color: #87BE39;
+  position: relative;
+  top : 200px;
+  left: 575px;
+  border-radius: 25px;
+  font-size: 23px;
+}
+
+.bt:hover{
+  color : black;
+  text-decoration: none;
+}
+
+#features{
+    position: relative;
+    top: 300px;
+}
+
+/* why us starts here */
+
+.whyus{
+  position: relative;
+  top : 350px;
+  background-color: #F2F2F2;
+  display: flex;
+  align-items: top;
+}
+
+span{
+  padding: 10px;
+}
+
+span > #why{
+  color: #87BE39;
+  font-style: Sans-serif;
+}
+
+#usp{
+  color: #87BE39;
+}
+
+
+
+/* how to use starts here */
+
+.how2use{
+  position: relative;
+  top: 350px;
+  text-align: center;
+  /* background-color: #ECF9FA; */
+}
+
+.how2use>ul{
+  display: inline-block;
+  font-size: 25px;
+}
+
+.main{
+    position: relative;
+    top: 35px;
+    /* font-size: 50px; */
+}
+
+.main>li>h5{
+  font-size: 25px;
+}
+
+/* this is how to use header */
+#how2useh1{
+  color: #87BE39;
+  font-style: Sans-serif;
+  font-size: 50px;
+  position: relative;
+  top: 15px;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* footer starts here */
+
+
+.footer{
+  position: relative;
+  top: 400px;
+  background-color: #202121;
+  height: 500px;
+}
+
+.footer > h3{
+  position: relative;
+  top: 100px;
+  left: 125px;
+  color: #87BE39;
+  font-size: 30px;
+}
+
+.footer>h6{
+  position: relative;
+  top: 115px;
+  left: 125px;
+  font-size: 20px;
+  color: white;
+}
+
+.footer>p{
+  position: relative;
+  top: 120px;
+  left: 125px;
+  word-wrap: break-word;
+  width: 575px;
+}
+
+.absolute{
+  position: absolute;
+  right: 350px;
+  width: 250px;
+  height: 50px;
+}
+
+.absolute>h5{
+  position: relative;
+  top: -135px;
+  font-size: 27px;
+  color: #EE3D2D;
+  text-decoration: underline;
+}
+
+.absolute>a{
+  position: relative;
+  top: -110px;
+  color: white;
+}
+
+.absolute>a:hover{
+  color: #EE3D2D;
+  text-decoration:none;
+}
+
+.abs2{
+  position: absolute;
+  right: 80px;
+  width: 250px;
+  height: 50px;
+}
+
+.abs2>p{
+  position: relative;
+  top: -137px;
+  font-size: 27px;
+  color: #EE3D2D;
+  text-decoration: underline;
+}
+
+.abs2>a{
+  position: relative;
+  top: -130px;
+}

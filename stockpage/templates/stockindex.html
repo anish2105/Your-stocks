@@ -1,0 +1,39 @@
+
+{% extends 'base2.html' %}
+{% load static %}
+{% block body %}
+<p >welcome</p>
+<table class="table table-hover">
+      <br>
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Buy-in Price</th>
+        <th>Buy-in date</th>
+        <th>Selling Price</th>
+        <th>Selling date</th>
+        <th>Target 1</th>
+        <th>Target 2</th>
+        <th>Profit</th>
+        <th>Loss</th>
+      </tr>
+      </thead>
+      <tbody>
+{% for stocks in stock %}
+<tr>
+<th>{{stocks.id}}</th>
+<th>{{stocks.nameofstocks}}</th>
+<th>{{stocks.buy}}</th>
+<th>{{stocks.buydate}}</th>
+<th>{{stocks.sell}}</th>
+<th>{{stocks.selldate}}</th>
+<th>{{stocks.t1}}</th>
+<th>{{stocks.t2}}</th>
+<th>{{stocks.profit}}</th>
+<th>{{stocks.loss}}</th>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

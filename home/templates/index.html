@@ -1,0 +1,122 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="">
+  <!-- opening page-->
+  <h1 id="main"><span id="your">YOUR</span> STOCKS</h1>
+  <h3 id= 'mainpara'>Your one stop solution to track and record all the stocks transaction you made.</h3>
+  <h3 id= 'mainpara2'> From anywhere and anytime. Always secure and fast.</h3>
+  <a href="#section1" class="bt">Learn more</a><!--for linking to different part of the same page-->
+</div>
+
+
+
+<!-- Features Start -->
+    <div class="container-fluid py-5 py-lg-0 feature" id="features">
+        <div class="row py-5 py-lg-0">
+            <div class="col-lg-4 p-0">
+                <div class="feature-item d-flex align-items-center border-right px-5 mb-4 mb-lg-0">
+                    <i class="flaticon-policeman display-3 text-primary mr-4"></i>
+                    <div class="">
+                        <h5 class="mb-3">SECURE AND FAST</h5>
+                        <p class="m-0">Security is our utmost priority so NO compromise in security.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="feature-item d-flex align-items-center border-right px-5 mb-4 mb-lg-0">
+                    <i class="flaticon-helmet display-3 text-primary mr-4"></i>
+                    <div class="">
+                        <h5 class="mb-3">EASY TO USE </h5>
+                        <p class="m-0">Simple, convenient design which makes your experience alot better.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="feature-item d-flex align-items-center px-5">
+                    <i class="flaticon-surveillance display-3 text-primary mr-4"></i>
+                    <div class="">
+                        <h5 class="mb-3">USE ANYTIME ANYWHERE</h5>
+                        <p class="m-0">Use website to track all of your transactions anytime, anywhere in the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+<!-- why us -->
+    <div class="whyus" id="section1"><!--learn more will redirect hee using the id = section1-->
+      <img  src="{%static 'img/bull.png' %}"  width="550" alt="">
+      <span>
+        <h1 id="why">Why "YOUR STOCKS" ?</h1>
+        <br>
+        <b>
+        <p>Stocktake (or "inventory checking" is the physical verification of the quantities and condition of items held in an inventory) is an essential part of stock control and is the best way to keep track of your stock.</p>
+        <p>YOUR STOCK is an online-system for tracking items you have bought and sold.</p>
+        <p>YOUR STOCK helps you to record all stocks purchases you have made and view them at your convenience. It also helps in recording and tracking all the stocks you brought.</p>
+        </b>
+        <br>
+        <h3 id="usp">OUR USP?</h3>
+        <p><b>Our website lets you view the total profit/loss you made throughout your stock trade journey so that you dont have to go through a rigorous process of calculating all the profit/loss and get a tally of it.</b></p>
+      </span>
+    </div>
+  <!-- why us end -->
+
+  <!-- how to use website -->
+  <div class="how2use" >
+    <h1 id="how2useh1">HOW TO USE?</h1>
+    <ul class="main">
+      <li><h5 >Register as YOUR STOCKS user</h5></li>
+       <p><b>and start recording your stocks trades</b></p>
+      <li><h5>Create your account</h5>
+      <p><b>with an email account and appropriate username</b></p>
+      <li><h5>Start adding all the transactions you made</h5></li>
+      <p><b>click on the "NEW" button to start adding</b></p>
+      <li><h5>All the purchases you have made will be available on the stockpage</h5> </li>
+      <p><b>use the search button to search a particular entry</b></p>
+      <li><h5>You can delete a entry also if you have entered it wrong</h5></li>
+      <p><b>click on delete to delete it.</b></p>
+    </ul>
+  </div>
+  <!-- how to use end-->
+
+  <!--footer-->
+  <div class="footer">
+    <h3>YOUR STOCKS</h3>
+    <h6>DISCLAIMER</h6>
+    <p>The content of the site and the interpretation of data are solely the personal views of the users. YOUR STOCKS has the right to make modifications and alterations to the content of the website. Users are advised to use the data for the purpose of information only and rely on their own judgment while making investment decisions.This website doesn't recommend any investments, this website is only used as a journal for your investments.  </p>
+
+    <div class="absolute">
+      <h5>Your stocks</h5>
+      <a href="{% url 'home' %}">Home</a><br>
+      <a href="{% url 'stockpage' %} ">Stockpage</a><br>
+      <a href="#">Stats</a><br>
+      <a href="#">Register</a><br>
+      <a href="#">Login</a><br>
+    </div>
+
+  <div class="abs2">
+    <p><b>Follow the maker</b></p>
+    <a href="https://github.com/anish2105"><img src="{% static 'img/github.png' %}" alt="" width="100px" height="100px"></a>
+     &nbsp; <!--for space between the images or links -->
+    <a href="https://www.linkedin.com/in/anish-vantagodi-343a43209/"><img src="{% static 'img/linkedin.png' %}" alt="" width="100px" height="100px"></a>
+    <br>
+    <br>
+    <p>For queries contact, <br> anishvv0000@gmail.com</p>
+
+  </div>
+  </div>
+
+
+
+
+
+
+  <!-- footer end-->
+{% endblock %}

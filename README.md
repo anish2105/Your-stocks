@@ -1,5 +1,5 @@
 Your stocks!
-A website made of Django and Postgresql , to record your stock transactions.
+A website made of Django and Postgresql , to record your stock transactions[including user specfic data].
 
 Website has:
 1)Register and login page

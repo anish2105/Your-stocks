@@ -5,12 +5,14 @@ from .forms import Taskform
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.core.paginator import Paginator
 # Create your views here.
 
 @login_required
 def stockpage(request):
     # log_user = request.user
     stock = stocks.objects.filter(user = request.user)
+
     return render(request,'stockindex.html' , {'stock':stock})
 
 def addstock(request):
@@ -30,15 +32,7 @@ def addstock(request):
             submitted = True
     return render(request,'addstock.html',{'form':form,'submitted':submitted} )
 
-# def addstock(request):
-#     if request.method == "POST":
-#         nameofstocks = request.POST['nameofstocks']
-#
-#         new = stocks(content = nameofstocks,user = request.user)
-#         new.save()
-#         return return(request,'addstock.html')
-#     else:
-#         return return(request,'addstock.html'
+
 
 def search(request):
     if request.method == "POST":

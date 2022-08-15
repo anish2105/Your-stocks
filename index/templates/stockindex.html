@@ -2,7 +2,8 @@
 {% extends 'base2.html' %}
 {% load static %}
 {% block body %}
-<p >welcome,{{user.username}}</p>
+<center>
+<h1 >Welcome,{{user.first_name}}</h1></center>
 <table class="table table-hover" >
       <br>
       <thead>
@@ -17,23 +18,32 @@
         <th>Target 2</th>
         <th>Update</th>
         <th>Delete</th>
+        <th>Profit/loss</th>
       </tr>
       </thead>
       <tbody>
-{% for stocks in stock %}
-<tr>
 
-<th>{{stocks.nameofstocks}}</th>
-<th>{{stocks.buy}}</th>
-<th>{{stocks.buydate}}</th>
-<th>{{stocks.sell}}</th>
-<th>{{stocks.selldate}}</th>
-<th>{{stocks.t1}}</th>
-<th>{{stocks.t2}}</th>
-<th><a id="update" href="{% url 'update' stocks.id %}">Update</a></th>
-<th><a id="update" href="{% url 'delete' stocks.id %}">Delete</a></th>
-</tr>
-{% endfor %}
+  {% for stocks in stock %}
+
+  <tr>
+
+  <th>{{stocks.nameofstocks}}</th>
+  <th>{{stocks.buy}}</th>
+  <th>{{stocks.buydate}}</th>
+  <th>{{stocks.sell}}</th>
+  <th>{{stocks.selldate}}</th>
+  <th>{{stocks.t1}}</th>
+  <th>{{stocks.t2}}</th>
+
+  <th><a id="update" href="{% url 'update' stocks.id %}">Update</a></th>
+  <th><a id="delete" href="{% url 'delete' stocks.id %}">Delete</a></th>
+  <th>{{stocks.calculate}}</th>
+  </tr>
+
+  {% endfor %}
+
 </tbody>
 </table>
+
+
 {% endblock %}

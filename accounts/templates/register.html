@@ -2,18 +2,45 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Sign Up</title>
+    {% load static %}
+
+    <link rel="icon" href="{% static 'img/up.png' %}" type="image/icon type">
+    <link rel="stylesheet" href="{% static 'main.css' %}?{% now 'u' %}">
   </head>
-  <body>
+  <body class="register_body">
+    <div class="register_page">
+    <img src="{%static 'img/green.png' %}" alt="Norway" style="width:100%;">
+    <div class="register_form">
+      <center>
+      <h1 id="register_h"><u>Sign Up</u></h1>
+    </center>
     <form  action="{% url 'register' %}" method="post">
       {%  csrf_token %}
-
+      <center>
+      <label for="first_name"><b><u>First Name</u></b></label>
+    </center>
       <input type="text" name="first_name" placeholder="First Name"><br>
+      <center>
+      <label for="username"><b><u>Username</u></b></label>
+    </center>
       <input type="text" name="username" placeholder="Username"><br>
+      <center>
+      <label for="email"><b><u>Email</u></b></label>
+    </center>
       <input type="email" name="email" placeholder="Email"><br>
+      <center>
+      <label for="password"><b><u>Password</u></b></label>
+    </center>
       <input type="password" name="password1" placeholder="Enter password"><br>
+      <center>
+      <label for="confirm_password"><b><u>Confirm Password</u></b></label>
+    </center>
       <input type="password" name="password2" placeholder="Confirm password"><br>
-      <input type="submit" name="Submit" >
+      <center>
+      <input type="submit" class="login_btn">
+    </center>
+    <a id="register_link" href="{% url 'login' %}">Already have a account?Click here </a>
     </form>
   </body>
 </html>

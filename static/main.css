@@ -72,7 +72,7 @@ nav{
   color: white;
   background-color: #87BE39;
   position: relative;
-  top : 200px;
+  top : 225px;
   left: 575px;
   border-radius: 25px;
   font-size: 23px;
@@ -85,14 +85,14 @@ nav{
 
 #features{
     position: relative;
-    top: 300px;
+    top: 350px;
 }
 
 /* why us starts here */
 
 .whyus{
   position: relative;
-  top : 350px;
+  top : 400px;
   background-color: #F2F2F2;
   display: flex;
   align-items: top;
@@ -117,9 +117,18 @@ span > #why{
 
 .how2use{
   position: relative;
-  top: 350px;
-  text-align: center;
-  /* background-color: #ECF9FA; */
+  top: 425px;
+
+  background-color: white;
+  display: flex;
+  align-items: top;
+}
+span > #h2u{
+  color: #87BE39;
+  font-style: Sans-serif;
+  text-decoration: underline;
+  position: relative;
+  left: 20px;
 }
 
 .how2use>ul{
@@ -155,10 +164,13 @@ span > #why{
 
 /* footer starts here */
 
+#footer_content{
+  color: white;
+}
 
 .footer{
   position: relative;
-  top: 400px;
+  top: 450px;
   background-color: #202121;
   height: 500px;
 }
@@ -231,4 +243,134 @@ span > #why{
 .abs2>a{
   position: relative;
   top: -130px;
+}
+
+
+/* for login , register and add stock page  */
+.login_page{
+   position: relative;
+}
+
+.login_form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+input[type=text], input[type=password],input[type=email],input[type = number],input[type = datetime-local] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus,input[type=email]:focus,input[type = number]:focus,input[type = datetime-local]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.login_btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  /* position: relative;
+  left: 15px; */
+}
+
+.login_btn:hover {
+  opacity: 1;
+}
+
+label{
+  font-size: 25px;
+  color: Black;
+}
+
+#login_h{
+  color: black;
+}
+
+.register_page{
+   position: relative;
+}
+
+.main_body {
+    overflow-x: hidden;
+}
+
+.register_form{
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#register_h{
+  color: #00ff33;
+}
+
+.register_body{
+  overflow-y: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.add_page{
+   position: relative;
+}
+
+.add_form{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#delete{
+  color: red;
+  font-size: 17px;
+}
+
+#update{
+  color: #0cebd8;
+  font-size: 17px;
+}
+
+.update_page{
+  position: absolute;
+  left: 100px;
+  bottom: 110px;
+
+}
+
+.updates_page{
+   position: relative;
+}
+
+.updates_form{
+  position: absolute;
+  top: 80%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.up_table{
+  border: 1px solid black;
+}
+
+#register_link{
+  color: black;
+}
+#register_link:hover{
+  text-decoration: underline;
 }

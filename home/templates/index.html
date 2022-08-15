@@ -30,7 +30,7 @@
                 <div class="feature-item d-flex align-items-center border-right px-5 mb-4 mb-lg-0">
                     <i class="flaticon-helmet display-3 text-primary mr-4"></i>
                     <div class="">
-                        <h5 class="mb-3">EASY TO USE </h5>
+                        <h5 class="mb-3"><center>EASY TO USE </center></h5>
                         <p class="m-0">Simple, convenient design which makes your experience alot better.
                         </p>
                     </div>
@@ -62,27 +62,31 @@
         <p>YOUR STOCK helps you to record all stocks purchases you have made and view them at your convenience. It also helps in recording and tracking all the stocks you brought.</p>
         </b>
         <br>
-        <h3 id="usp">OUR USP?</h3>
+        <h3 id="usp">OUR MOTIVE?</h3>
         <p><b>Our website lets you view the total profit/loss you made throughout your stock trade journey so that you dont have to go through a rigorous process of calculating all the profit/loss and get a tally of it.</b></p>
       </span>
     </div>
   <!-- why us end -->
 
   <!-- how to use website -->
-  <div class="how2use" >
-    <h1 id="how2useh1">HOW TO USE?</h1>
-    <ul class="main">
-      <li><h5 >Register as YOUR STOCKS user</h5></li>
-       <p><b>and start recording your stocks trades</b></p>
-      <li><h5>Create your account</h5>
-      <p><b>with an email account and appropriate username</b></p>
-      <li><h5>Start adding all the transactions you made</h5></li>
-      <p><b>click on the "NEW" button to start adding</b></p>
-      <li><h5>All the purchases you have made will be available on the stockpage</h5> </li>
-      <p><b>use the search button to search a particular entry</b></p>
-      <li><h5>You can delete a entry also if you have entered it wrong</h5></li>
-      <p><b>click on delete to delete it.</b></p>
+  <div class="how2use" id="section1">
+    <img  src="{%static 'img/bvb5.jpg' %}"  width="550" alt="">
+    <span>
+    <h1 id="h2u">HOW TO USE?</h1>
+    <ul >
+      <li>Register your accout (its free).</li>
+      <li>Login with your account</li>
+      <li>Click on 'addstock' button</li>
+      <li>Start adding your stocks</li>
+      <li>If you want to update your stock:</li>
+      <li>Click on the update buton</li>
+      <li>If you want to delete your stock:</li>
+      <li>Click on the delete buton</li>
+      <li>Few things to remember:</li>
+      <li>While recording the selling price : add all price (i.e., selling price, broker charge and tax)</li>
+      <li>While updating , fill 'name of the stock' blank otherwise it will not be updated</li>
     </ul>
+    </span>
   </div>
   <!-- how to use end-->
 
@@ -90,15 +94,19 @@
   <div class="footer">
     <h3>YOUR STOCKS</h3>
     <h6>DISCLAIMER</h6>
-    <p>The content of the site and the interpretation of data are solely the personal views of the users. YOUR STOCKS has the right to make modifications and alterations to the content of the website. Users are advised to use the data for the purpose of information only and rely on their own judgment while making investment decisions.This website doesn't recommend any investments, this website is only used as a journal for your investments.  </p>
+    <p id="footer_content">The content of the site and the interpretation of data are solely the personal views of the users. YOUR STOCKS has the right to make modifications and alterations to the content of the website. Users are advised to use the data for the purpose of information only and rely on their own judgment while making investment decisions.This website doesn't recommend any investments, this website is only used as a journal for your investments.  </p>
 
     <div class="absolute">
       <h5>Your stocks</h5>
       <a href="{% url 'home' %}">Home</a><br>
       <a href="{% url 'stockpage' %} ">Stockpage</a><br>
-      <a href="{% url 'stats' %}">Stats</a><br>
+      <!-- <a href="{% url 'stats' %}">Stats</a><br> -->
+      {% if user.is_authenticated %}
+      <a href="{% url 'logout' %}">Logout</a><br>
+      {% else %}
       <a href="{% url 'register' %}">Register</a><br>
       <a href="{% url 'login' %}">Login</a><br>
+      {% endif %}
     </div>
 
   <div class="abs2">
@@ -108,7 +116,7 @@
     <a href="https://www.linkedin.com/in/anish-vantagodi-343a43209/"><img src="{% static 'img/linkedin.png' %}" alt="" width="100px" height="100px"></a>
     <br>
     <br>
-    <p>For queries contact, <br> anishvv0000@gmail.com</p>
+
 
   </div>
   </div>

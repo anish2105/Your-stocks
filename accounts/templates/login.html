@@ -1,15 +1,39 @@
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}?{% now 'u' %}">
+    <link rel="icon" href="{% static 'img/up.png' %}" type="image/icon type">
   </head>
   <body>
+
+  <div class="login_page">
+  <img src="{%static 'img/b3.webp' %}" alt="Norway" style="width:100%;">
+  <div class="login_form">
+    <center>
+    <h1 id="login_h"><u>Login</u></h1>
+  </center>
     <form  action="{% url 'login' %}" method="post">
       {%  csrf_token %}
+      <center>
+      <label for="username"><b>Username:</b></label>
+    </center>
       <input type="text" name="username" placeholder="Username"><br>
+    <center>
+      <label for="password"><b>Password:</b></label>
       <input type="password" name="password" placeholder="Enter password"><br>
-      <input type="submit">
+    </center>
+      <center>
+      <input type="submit" class="login_btn" value="Login">
+    </center>
+    <a id="register_link" href="{% url 'register' %}">New?Click here to register</a>
     </form>
-  </body>
+  </div>
+</div>
+
+
+</body>
 </html>

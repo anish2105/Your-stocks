@@ -1,22 +1,50 @@
 {% extends 'base2.html' %}
 {% load static %}
 {% block body %}
-<p>welcome addstock</p>
+
 
 {% if submitted  %}
   Your stock was submiited successfully
 {% else %}
+<div class="add_page">
+<img src="{%static 'img/white3.png' %}" alt="Norway" style="width:100%;">
+
+<div class="add_form">
+  
 <form  action="{% url 'addstock' %}" method = POST>
 {% csrf_token %}
+
+  <center>
+    <label foBuy-in Priceof_Stock"><b>Name of Stock</b></label>
+  </center>
       <input type="text" name="nameofstocks" placeholder="Enter Name of stocks"><br>
+      <center>
+      <label for="Buy-in_Price"><b>Buy-in Price</b></label>
+    </center>
       <input type="number" name="buy" placeholder="Enter buy-in price"><br>
+      <center>
+      <label for="Buy-in_Date"><b>Buy-in Date</b></label>
+    </center>
       <input type="datetime-local" name="buydate" placeholder="Enter buying data"><br>
+      <center>
+      <label for="Selling_Price"><b>Selling Price</b></label>
+    </center>
+
       <input type="number" name="sell" placeholder="Enter selling price"><br>
+      <center>
+      <label for="Selling_date"><b>Selling date</b></label>
+    </center>
       <input type="datetime-local" name="selldate" placeholder="Enter selling data"><br>
+      <center>
+      <label for="Target1"><b>Target1</b></label>
+    </center>
       <input type="number" name="t1" placeholder="Enter target 1"><br>
+      <center>
+      <label for="Target2"><b>Target2</b></label>
+    </center>
       <input type="number" name="t2" placeholder="Enter target 2"><br>
 
-      <input type="submit"  class="btn btn-primary" value="Submit"><br>
+      <input type="submit"  class="login_btn" value="Submit"><br>
   </form>
 {% endif %}
 {% for stocks in stock %}

@@ -6,14 +6,15 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
+from django.db.models import Avg, Count, Min, Sum
 # Create your views here.
 
 @login_required
 def stockpage(request):
     # log_user = request.user
     stock = stocks.objects.filter(user = request.user)
-
-    return render(request,'stockindex.html' , {'stock':stock})
+    # data = stocks.objects.filter(user = request.user).aggregate(value =Sum('buy'))
+    return render(request,'stockindex.html' , {'stock':stock }) #,'data':data
 
 def addstock(request):
     submitted = False
@@ -37,13 +38,19 @@ def addstock(request):
 def search(request):
     if request.method == "POST":
         searched = request.POST['searched']
-        stock = stocks.objects.filter(nameofstocks__contains = searched)
+        stock = stocks.objects.filter(nameofstocks__contains = searched , user = request.user)
         return render(request,'search.html' , {'searched':searched , 'stock':stock})
     else:
         return render(request,'search.html' , {'searched':searched , 'stock':stock})
 
 def stats(request):
-    return render(request,'stats.html')
+    stock = stocks.objects.filter(user = request.user)
+    t_buy = stocks.objects.filter(user = request.user).aggregate(value =Sum('buy'))
+    t_sell = stocks.objects.filter(user = request.user).aggregate(value =Sum('sell'))
+    winnings = stocks.objects.filter(user = request.user).aggregate(Sum('buy'), Sum('sell'))
+    profit =   winnings["sell__sum"] - winnings["buy__sum"]
+
+    return render(request,'stats.html',  {'t_buy':t_buy ,'t_sell':t_sell , 'stock':stock , 'profit' : profit})
 
 def update(request,update_id):
     stock = stocks.objects.get(pk = update_id)

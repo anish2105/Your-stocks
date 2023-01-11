@@ -18,8 +18,13 @@ class stocks(models.Model):
     def __str__(self):
         return self.nameofstocks
 
+    
+
     def calculate(self):
         if(self.buy != None or self.sell != None):
-            return self.sell - self.buy
+            profit =  self.sell - self.buy
+            # t_p.append(profit)
+            return profit
+
         else:
             return None

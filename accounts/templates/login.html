@@ -11,8 +11,10 @@
   <body>
 
   <div class="login_page">
+
   <img src="{%static 'img/b3.webp' %}" alt="Norway" style="width:100%;">
   <div class="login_form">
+
     <center>
     <h1 id="login_h"><u>Login</u></h1>
   </center>
@@ -29,7 +31,9 @@
       <center>
       <input type="submit" class="login_btn" value="Login">
     </center>
-    <a id="register_link" href="{% url 'register' %}">New?Click here to register</a>
+    <a id="register_link" href="{% url 'register' %}">New?Click here to register</a><br>
+    <a id="go_link" href="{% url 'home' %}" > <<< Go Back  </a>
+
     </form>
   </div>
 </div>

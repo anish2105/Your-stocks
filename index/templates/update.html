@@ -57,32 +57,32 @@
   <center>
     <label foBuy-in Priceof_Stock"><b>Name of Stock</b></label>
   </center>
-      <input type="text" name="nameofstocks" placeholder="Enter Name of stocks"><br>
+      <input type="text" name="nameofstocks" placeholder="Enter Name of stocks" , value = '{{stock}}'><br>
       <center>
       <label for="Buy-in_Price"><b>Buy-in Price</b></label>
     </center>
-      <input type="number" name="buy" placeholder="Enter buy-in price"><br>
+      <input type="number" name="buy" placeholder="Enter buy-in price" , value = '{{stock.buy}}'><br>
       <center>
       <label for="Buy-in_Date"><b>Buy-in Date</b></label>
     </center>
-      <input type="datetime-local" name="buydate" placeholder="Enter buying data"><br>
+      <input type="datetime-local" name="buydate" placeholder="Enter buying data" , value = '{{stock.buydate}}'><br>
       <center>
       <label for="Selling_Price"><b>Selling Price</b></label>
     </center>
 
-      <input type="number" name="sell" placeholder="Enter selling price"><br>
+      <input type="number" name="sell" placeholder="Enter selling price" , value = '{{stock.sell}}'><br>
       <center>
       <label for="Selling_date"><b>Selling date</b></label>
     </center>
-      <input type="datetime-local" name="selldate" placeholder="Enter selling data"><br>
+      <input type="datetime-local" name="selldate" placeholder="Enter selling data" ,  value = '{{stock.selldate}}'><br>
       <center>
       <label for="Target1"><b>Target1</b></label>
     </center>
-      <input type="number" name="t1" placeholder="Enter target 1"><br>
+      <input type="number" name="t1" placeholder="Enter target 1" ,  value = '{{stock.t1}}'><br>
       <center>
       <label for="Target2"><b>Target2</b></label>
     </center>
-      <input type="number" name="t2" placeholder="Enter target 2"><br>
+      <input type="number" name="t2" placeholder="Enter target 2" ,  value = '{{stock.t2}}'><br>
 
       <input type="submit"  class="login_btn" value="Submit"><br>
   </form>

@@ -172,7 +172,7 @@ span > #h2u{
   position: relative;
   top: 450px;
   background-color: #202121;
-  height: 500px;
+  height: 400px;
 }
 
 .footer > h3{
@@ -196,7 +196,7 @@ span > #h2u{
   top: 120px;
   left: 125px;
   word-wrap: break-word;
-  width: 575px;
+  width: 530px;
 }
 
 .absolute{
@@ -242,7 +242,7 @@ span > #h2u{
 
 .abs2>a{
   position: relative;
-  top: -130px;
+  top: -115px;
 }
 
 
@@ -372,5 +372,16 @@ label{
   color: black;
 }
 #register_link:hover{
+  text-decoration: underline;
+}
+
+#go_link{
+  color: black;
+  position: relative;
+  top: 10px;
+  /* left: 50px; */
+
+}
+#go_link:hover{
   text-decoration: underline;
 }
